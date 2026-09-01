@@ -1,93 +1,154 @@
 # Indian Vehicle Loan Credit Risk Analytics
 
-## 📌 Project Overview
+## Project Overview
 
-This project analyzes vehicle loan portfolio data to identify **customer credit risk, loan risk factors, geographic risk, operational risk, and monthly portfolio trends**.
+This project analyzes vehicle loan portfolio performance and credit risk using **Python, MySQL, and Power BI**. The analysis focuses on identifying factors associated with first-EMI loan defaults and highlighting customer, loan, geographic, and operational risk areas.
 
-The analysis combines **MySQL, Python, and Power BI** to transform raw vehicle-loan data into actionable insights that can support credit-risk monitoring and portfolio decision-making.
+### Project Workflow
 
-The project focuses on identifying patterns associated with **first-EMI loan default** and segmenting customers based on multiple risk indicators.
-
----
-
-## 🎯 Business Objective
-
-The primary objectives of this analysis are to:
-
-- Measure overall loan portfolio performance and default rate
-- Identify loan characteristics associated with higher default risk
-- Analyze the impact of **Loan-to-Value (LTV)** on defaults
-- Evaluate customer credit behaviour such as previous overdue and delinquency
-- Analyze credit-score and credit-inquiry patterns
-- Identify geographic and operational risk across states, branches, suppliers, and manufacturers
-- Analyze monthly loan volume and default trends
-- Segment customers into different risk categories
-- Identify customers exhibiting multiple risk indicators
+Data Preparation → Python Analysis → SQL Analysis → Risk Segmentation → Power BI Dashboard → Business Insights
 
 ---
 
-## 📊 Dataset
+## Business Objectives
 
-The project uses the **LTFS Vehicle Loan Default Prediction** dataset containing approximately **233K loan records and 41 features**.
-
-The dataset contains information related to:
-
-- Loan and asset characteristics
-- Loan-to-Value (LTV)
-- Customer credit history
-- Previous overdue accounts
-- Recent delinquency
-- Credit inquiries
-- Employment type
-- Branch and supplier information
-- Manufacturer information
-- Geographic information
-- Loan default outcome
-
-### Target Variable
-
-`loan_default`
-
-- `0` → No first-EMI default
-- `1` → First-EMI default
-
-> The original raw dataset (`train.csv`) is not included in this repository. It can be obtained from the original dataset source and placed in the `data/` directory.
-
-The processed analytical dataset used for SQL analysis and Power BI is included in the repository.
+- Analyze overall loan portfolio and default performance
+- Identify high-risk customer and loan segments
+- Study the impact of LTV, credit history, overdue accounts, and delinquency
+- Identify risky branches, suppliers, manufacturers, and locations
+- Analyze monthly loan and default trends
+- Develop actionable recommendations for credit risk monitoring
 
 ---
 
-## 🛠️ Tools & Technologies
+## Dataset
+
+- **233,154 loan records**
+- **41 original features**
+- Target variable: `loan_default`
+- Source: Public LTFS/Kaggle vehicle loan dataset
+
+The analysis covers loan characteristics, customer credit behaviour, employment, geography, and operational information.
+
+---
+
+## Tools & Technologies
 
 | Tool | Purpose |
-|---|---|
-| **Python** | Data exploration, cleaning, feature engineering and risk analysis |
-| **MySQL** | Business-oriented SQL analysis and segmentation |
-| **Power BI** | Interactive dashboard and visualization |
-| **Jupyter Notebook** | Python analysis workflow |
-| **Git & GitHub** | Version control and project documentation |
+|------|---------|
+| Python | Data cleaning, EDA & feature engineering |
+| Pandas & NumPy | Data analysis & transformation |
+| MySQL | SQL-based analysis |
+| Power BI | Interactive dashboard |
+| DAX | Measures & KPIs |
+| Git & GitHub | Version control |
 
 ---
 
-# 🔄 Analytical Workflow
+# Python Analysis
 
-```text
-Raw Vehicle Loan Dataset
-          ↓
-   Python Exploration
-          ↓
- Data Quality Checks
-          ↓
- Data Cleaning
-          ↓
- Feature Engineering
-          ↓
- Risk Segmentation
-          ↓
-   Processed Dataset
-          ↓
-      MySQL Analysis
-          ↓
-     Power BI Dashboard
-          ↓
- Business Risk Insights
+Performed:
+
+- Data exploration and quality checks
+- Data cleaning and preparation
+- Feature engineering
+- LTV and credit risk segmentation
+- Customer and credit behaviour analysis
+- Geographic and operational analysis
+- Supplier, branch, and monthly performance analysis
+
+---
+
+# SQL Analysis
+
+SQL analysis covered:
+
+- Portfolio performance
+- Loan and LTV analysis
+- Customer credit behaviour
+- Risk segmentation
+- Geographic analysis
+- Branch and supplier performance
+- Monthly default trends
+- Advanced risk profiling
+
+---
+
+# Power BI Dashboard
+
+### Page 1 — Portfolio Overview
+
+**KPIs:** Total Loans, Total Defaults, Default Rate, Loan Amount, Asset Cost and LTV
+
+**Visualizations:** Portfolio risk, loan distribution and monthly loan/default performance.
+
+**Purpose:** Executive-level portfolio overview.
+
+### Page 2 — Customer & Credit Risk
+
+**Visualizations:** Credit score, previous overdue, delinquency, inquiries, credit history and risk categories.
+
+**Purpose:** Identify customer-level credit risk signals.
+
+### Page 3 — Geographic & Operational Risk
+
+**Visualizations:** State, manufacturer, branch, supplier and branch-level risk.
+
+**Purpose:** Identify geographic and operational risk concentrations.
+
+### Page 4 — Monthly Loan & Default Trends
+
+**Visualizations:** Monthly loan volume, default rate and total defaults.
+
+**Purpose:** Monitor changes in portfolio performance over time.
+
+---
+
+# Key Findings
+
+- Overall default rate: **21.71%**
+- Very High Risk segment default rate: **33.16%**
+- LTV 80–90% segment default rate: **25.88%**
+- Customers with previous overdue accounts: **27.41%**
+- Customers with recent delinquency: **27.09%**
+- Supplier 1539 showed a **55.90%** default rate and requires further investigation
+- October 2018 recorded the highest monthly default rate at **23.51%**
+
+---
+
+# Business Recommendations
+
+1. Apply stronger controls to high-LTV loans.
+2. Use previous overdue and recent delinquency as important risk indicators.
+3. Closely monitor Very High Risk customer segments.
+4. Review branches and suppliers with unusually high default rates.
+5. Track monthly default trends for early identification of portfolio deterioration.
+
+---
+
+# Project Outcome
+
+The project combines **SQL analysis, Python data analytics, and Power BI visualization** to convert a large vehicle-loan dataset into actionable credit-risk insights.
+
+It demonstrates practical skills in **data cleaning, EDA, SQL, feature engineering, risk analysis, dashboard development, and business decision-making**.
+
+---
+
+## Project Skills Demonstrated
+
+**SQL/MySQL | Python | Pandas | NumPy | EDA | Feature Engineering | Credit Risk Analysis | Power BI | DAX | Data Visualization | Business Intelligence**
+
+---
+# Dashboard Screenshots
+
+### Portfolio Overview
+![Portfolio Overview](Screenshot/01_Portfolio%20Overview.png)
+
+### Customer & Credit Risk
+![Customer & Credit Risk](Screenshot/02_Customer%20%26%20Credit%20Risk.png)
+
+### Geographic & Operational Risk
+![Geographic & Operational Risk](Screenshot/03_Geographic%20%26%20Operational%20Risk.png)
+
+### Monthly Loan & Default Trends
+![Monthly Trends](Screenshot/04_Monthly_Trends.png)
